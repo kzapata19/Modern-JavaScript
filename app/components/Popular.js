@@ -38,8 +38,7 @@ function RepoGrid ({ repos }) {
               <li>{stargazers_count} stars</li>
             </ul>
           </li>
-        )
-      })}
+      ))}
     </ul>
   )
 }

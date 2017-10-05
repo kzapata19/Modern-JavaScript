@@ -43,29 +43,24 @@ function RepoGrid ({ repos }) {
   )
 }
 
-RepoGrid.propTypes = {
-  repos: PropTypes.array.isRequired,
-}
-
 SelectLanguage.propTypes = {
   selectedLanguage: PropTypes.string.isRequired,
   onSelect: PropTypes.func.isRequired,
 };
 
-class Popular extends React.Component {
-  constructor(props) {
-    super();
-    this.state = {
-      selectedLanguage: 'All',
-      repos: null,
-    };
+RepoGrid.propTypes = {
+  repos: PropTypes.array.isRequired,
+};
 
-    this.updateLanguage = () => this.updateLanguage;
+class Popular extends React.Component {
+  state = {
+    selectedLanguage: 'All',
+    repos: null,
   }
   componentDidMount() {
     this.updateLanguage(this.state.selectedLanguage)
   }
-  updateLanguage(lang) {
+  updateLanguage = (lang) => {
     this.setState(() => ({
         selectedLanguage: lang,
         repos: null

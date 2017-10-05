@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 export default function PlayerPreview ({ avatar, username, chidlren }) {
+
   return (
     <div>
       <div className='column'>

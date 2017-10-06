@@ -66,7 +66,7 @@ class Battle extends React.Component {
     this.setState(() => ({
         [id + 'Name']: username,
         [id + 'Image']: `https://github.com/${username}.png?size=200`
-    }));
+    }))
   }
   handleReset = (id) => {
     this.setState(() => ({
@@ -122,7 +122,7 @@ class Battle extends React.Component {
           <Link
             className='button'
             to={{
-              pathname: match.url + "/results",
+              pathname: match.url + '/results',
               search: `?playerOneName=${playerOneName}&playerTwoName=${playerTwoName}`
             }}>
               Battle
